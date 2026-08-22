@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact — InAmigos Foundation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,450&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- NAV -->
+  <div class="nav" id="siteNav">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div class="brand-name">InAmigos Foundation</div>
+    </div>
+    <div class="nav-links">
+      <a href="our-work.html">Our Work</a>
+      <a href="campaigns.html">Campaigns</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="stories.html">Stories</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="volunteer.html#donate" class="nav-cta desktop-only">Donate Now</a>
+    <button class="nav-burger" id="burgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="our-work.html">Our Work</a>
+    <a href="campaigns.html">Campaigns</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="stories.html">Stories</a>
+    <a href="contact.html">Contact</a>
+    <a href="volunteer.html#donate" class="nav-cta">Donate Now</a>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="eyebrow">Get in Touch</div>
+    <h1>We're Here to Help</h1>
+    <p>Questions about donating, volunteering, or a campaign? Reach us directly or send a message below.</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section" style="border-top:none;padding-top:0;">
+    <div class="tag-wrap">
+      <span class="tag why"><span class="tag-dot"></span>Why It Matters</span>
+    </div>
+    <div class="contact-wrap">
+      <div>
+        <h3>Reach Out Anytime</h3>
+        <p>Makes it easy for anyone to reach the organization.</p>
+        <div class="contact-list">
+          <div class="contact-item"><span class="contact-dot"></span>hello@inamigosfoundation.org</div>
+          <div class="contact-item"><span class="contact-dot"></span>+91 40 4567 8900</div>
+          <div class="contact-item"><span class="contact-dot"></span>Hyderabad, Telangana, India</div>
+        </div>
+        <div class="social-row">
+          <div class="social-chip">f</div>
+          <div class="social-chip">in</div>
+          <div class="social-chip">ig</div>
+          <div class="social-chip">yt</div>
+        </div>
+      </div>
+      <div class="support-card">
+        <h4>Need Help?</h4>
+        <p>Have a question about donating, volunteering, or a campaign? Our support team responds within one business day.</p>
+        <a href="#contact-form" class="contact-btn" style="display:inline-block;">Send a Message</a>
+      </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="contact-form-wrap" id="contact-form">
+      <h3>Send Us a Message</h3>
+      <form id="contactForm">
+        <div class="form-grid">
+          <div class="field"><label>Full Name</label><input class="input" type="text" placeholder="Ananya Rao" required></div>
+          <div class="field"><label>Email</label><input class="input" type="email" placeholder="ananya@email.com" required></div>
+          <div class="field full"><label>Subject</label><input class="input" type="text" placeholder="Question about volunteering"></div>
+          <div class="field full"><label>Message</label><textarea placeholder="How can we help?" required></textarea></div>
+        </div>
+        <button type="submit" class="join-btn">Send Message</button>
+        <div class="form-msg" id="contactMsg"></div>
+      </form>
+    </div>
+
+    <div class="map-note">Hyderabad, Telangana, India — visits by appointment, please reach out first.</div>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <div class="closing-line"></div>
+    <h2>Prefer to Just Get Started?</h2>
+    <p>Donate directly or sign up as a volunteer — no message required.</p>
+    <div class="hero-ctas" style="justify-content:center;margin-top:26px;">
+      <a href="volunteer.html#donate" class="btn-primary">Donate Now</a>
+      <a href="volunteer.html" class="btn-secondary">Become a Volunteer</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="brand">
+      <div class="brand-mark" style="width:26px;height:26px;"></div>
+      <div class="brand-name">InAmigos Foundation</div>
+    </div>
+    <div class="footer-links">
+      <a href="our-work.html">Our Work</a>
+      <a href="campaigns.html">Campaigns</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="stories.html">Stories</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 InAmigos Foundation. All rights reserved.</div>
+  </div>
+
+</div>
+
+<script src="assets/nav.js"></script>
+<script>
+  const contactForm = document.getElementById('contactForm');
+  const contactMsg = document.getElementById('contactMsg');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      contactMsg.textContent = "Message sent! We'll respond within one business day.";
+      contactForm.reset();
+      setTimeout(() => { contactMsg.textContent = ''; }, 4000);
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Volunteer & Donate — InAmigos Foundation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,450&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- NAV -->
+  <div class="nav" id="siteNav">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div class="brand-name">InAmigos Foundation</div>
+    </div>
+    <div class="nav-links">
+      <a href="our-work.html">Our Work</a>
+      <a href="campaigns.html">Campaigns</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="stories.html">Stories</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="#donate" class="nav-cta desktop-only">Donate Now</a>
+    <button class="nav-burger" id="burgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="our-work.html">Our Work</a>
+    <a href="campaigns.html">Campaigns</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="stories.html">Stories</a>
+    <a href="contact.html">Contact</a>
+    <a href="#donate" class="nav-cta">Donate Now</a>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="eyebrow">Give & Volunteer</div>
+    <h1>Give Money, Give Time — Both Change Lives</h1>
+    <p>Make a one-time donation or sign up to volunteer. Either way, you're directly funding the programs on our Our Work page.</p>
+  </div>
+
+  <!-- DONATION -->
+  <div class="section" style="border-top:none;padding-top:0;" id="donate">
+    <div class="tag-wrap">
+      <span class="tag key"><span class="tag-dot"></span>Key Feature</span>
+    </div>
+    <div class="donate-card">
+      <div>
+        <h3>Make a Difference Today</h3>
+        <p class="desc">Your contribution helps us support communities and create sustainable change.</p>
+        <div class="amounts" id="amountRow">
+          <div class="amount-pill" data-amount="500">₹500</div>
+          <div class="amount-pill active" data-amount="1000">₹1,000</div>
+          <div class="amount-pill" data-amount="2500">₹2,500</div>
+          <div class="amount-pill" data-amount="5000">₹5,000</div>
+        </div>
+        <div class="donate-btn-row">
+          <button class="btn-yellow" id="donateBtn">Donate Now</button>
+          <span class="donate-note" id="donateNote">Every contribution counts.</span>
+        </div>
+      </div>
+      <div class="donate-visual">
+        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=800&auto=format&fit=crop" alt="Community members receiving support">
+      </div>
+    </div>
+  </div>
+
+  <!-- VOLUNTEER FORM -->
+  <div class="section" id="volunteer-form">
+    <div class="tag-wrap">
+      <span class="tag key"><span class="tag-dot"></span>Key Feature</span>
+    </div>
+    <div class="vol-wrap">
+      <div class="vol-visual">
+        <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?q=80&w=800&auto=format&fit=crop" alt="Volunteer smiling while helping">
+      </div>
+      <div class="form-card">
+        <h3>Become a Volunteer</h3>
+        <div id="campaignNote" class="badge-pill" style="display:none;"></div>
+        <form id="volForm">
+          <div class="form-grid">
+            <div class="field"><label>Full Name</label><input class="input" type="text" placeholder="Ananya Rao" required></div>
+            <div class="field"><label>Email</label><input class="input" type="email" placeholder="ananya@email.com" required></div>
+            <div class="field"><label>Phone Number</label><input class="input" type="tel" placeholder="+91 98xxxxx210"></div>
+            <div class="field"><label>Area of Interest</label><input class="input" type="text" id="interestField" placeholder="Education & Literacy"></div>
+            <div class="field full"><label>Availability</label><input class="input" type="text" placeholder="Weekends, evenings"></div>
+          </div>
+          <button type="submit" class="join-btn">Join Us</button>
+          <div class="form-msg" id="volMsg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <div class="closing-line"></div>
+    <h2>Curious Where Your Support Goes?</h2>
+    <p>Read stories from the volunteers and communities we work with.</p>
+    <div class="hero-ctas" style="justify-content:center;margin-top:26px;">
+      <a href="stories.html" class="btn-primary">Read Stories</a>
+      <a href="our-work.html" class="btn-secondary">See Our Programs</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="brand">
+      <div class="brand-mark" style="width:26px;height:26px;"></div>
+      <div class="brand-name">InAmigos Foundation</div>
+    </div>
+    <div class="footer-links">
+      <a href="our-work.html">Our Work</a>
+      <a href="campaigns.html">Campaigns</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="stories.html">Stories</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 InAmigos Foundation. All rights reserved.</div>
+  </div>
+
+</div>
+
+<script src="assets/nav.js"></script>
+<script>
+  // Donation amount pills — click to select
+  const pills = document.querySelectorAll('#amountRow .amount-pill');
+  let selectedAmount = 1000;
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      selectedAmount = pill.dataset.amount;
+    });
+  });
+
+  // Donate Now — show confirmation note
+  const donateBtn = document.getElementById('donateBtn');
+  const donateNote = document.getElementById('donateNote');
+  if (donateBtn) {
+    donateBtn.addEventListener('click', () => {
+      donateNote.textContent = `Thank you! ₹${Number(selectedAmount).toLocaleString('en-IN')} donation flow would start here.`;
+      setTimeout(() => { donateNote.textContent = 'Every contribution counts.'; }, 3500);
+    });
+  }
+
+  // If arriving from a campaign link, pre-fill the interest field and show a note
+  const params = new URLSearchParams(window.location.search);
+  const campaign = params.get('campaign');
+  if (campaign) {
+    const interestField = document.getElementById('interestField');
+    const campaignNote = document.getElementById('campaignNote');
+    if (interestField) interestField.value = campaign;
+    if (campaignNote) {
+      campaignNote.style.display = 'inline-flex';
+      campaignNote.textContent = `Signing up for: ${campaign}`;
+    }
+  }
+
+  // Volunteer form — prevent real submit, show confirmation
+  const volForm = document.getElementById('volForm');
+  const volMsg = document.getElementById('volMsg');
+  if (volForm) {
+    volForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      volMsg.textContent = "Thanks for signing up! We'll be in touch soon.";
+      volForm.reset();
+      setTimeout(() => { volMsg.textContent = ''; }, 4000);
+    });
+  }
+</script>
+</body>
+</html>
